@@ -81,6 +81,6 @@ curl http://localhost:8080/api/admin/audit-logs/1
 
 ## 设计说明
 
-Agent 会让 LLM 在每轮只返回 JSON。LLM 可以选择调用工具，也可以给出最终结论。最终结论一定会被规则引擎再次校验，所以即使 LLM 误判，硬性信贷规则也能强制覆盖。
+Agent 会让 LLM 在每轮只返回 JSON。LLM 可以选择调用工具，也可以给出最终结论。通过业务规则的硬性约束最大限度减少模型的幻觉。
 
 规则文档位于 `src/main/resources/business-rules.md`，启动时会被注入 System Prompt，用作轻量 RAG。
