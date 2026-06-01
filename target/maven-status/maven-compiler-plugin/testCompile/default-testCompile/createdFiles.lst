@@ -1,0 +1,3 @@
+com\example\loanagent\agent\LoanApprovalAgentTest.class
+com\example\loanagent\rule\RuleEngineTest.class
+com\example\loanagent\integration\LoanControllerIntegrationTest.class
